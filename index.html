@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOYCOTT Store - Global Online Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            logo: ['Poppins', 'sans-serif']
+          },
+          colors: {
+            primary: '#6366f1',
+            secondary: '#ec4899',
+            accent: '#10b981'
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <style>
+    .hero .swiper-slide { height: 400px; }
+    .flash-deals {
+      background-color: #f97316;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-3xl font-logo font-bold bg-gradient-to-r from-primary via-pink-500 to-secondary text-transparent bg-clip-text tracking-widest drop-shadow-sm">BOYCOTT Store</h1>
+      <div class="flex items-center gap-4">
+        <select class="border rounded px-2 py-1 text-sm">
+          <option>EN</option>
+          <option>FR</option>
+          <option>ES</option>
+        </select>
+        <div class="relative">
+          <input type="text" placeholder="Search products..." class="pl-10 pr-4 py-2 border rounded w-64">
+          <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
+        </div>
+        <button class="relative">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h14l-1.5 8H6L4 6H2"/></svg>
+          <span class="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full px-1">3</span>
+        </button>
+        <button class="px-3 py-1 bg-primary text-white rounded hover:bg-indigo-700 text-sm">Login</button>
+        <button class="px-3 py-1 bg-secondary text-white rounded hover:bg-pink-600 text-sm">Sign Up</button>
+      </div>
+    </div>
+    <nav class="bg-gray-100 border-t border-b text-sm py-2">
+      <div class="max-w-7xl mx-auto px-4 flex space-x-6 overflow-x-auto">
+        <div class="group relative">
+          <button class="font-semibold text-gray-700 group-hover:text-primary">Electronics</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md p-4 rounded w-60 z-10">
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-secondary">Smartphones</a></li>
+              <li><a href="#" class="hover:text-secondary">Laptops</a></li>
+              <li><a href="#" class="hover:text-secondary">Accessories</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="hover:text-secondary">Fashion</a>
+        <a href="#" class="hover:text-secondary">Home</a>
+        <a href="#" class="hover:text-secondary">Toys</a>
+        <a href="#" class="hover:text-secondary">Beauty</a>
+        <a href="#" class="hover:text-secondary">More</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Flash Deals -->
+  <div class="flash-deals sticky top-0 z-40">
+    <h3 class="text-lg font-semibold">Flash Deal: Up to 50% off today!</h3>
+    <a href="#" class="underline">Shop Now</a>
+  </div>
+
+  <!-- Hero Swiper -->
+  <section class="hero py-8">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-gradient-to-r from-primary to-secondary text-white flex flex-col items-center justify-center text-center">
+          <h2 class="text-4xl font-bold mb-4">Featured Product 1</h2>
+          <p class="text-lg">Explore our latest collection</p>
+        </div>
+        <div class="swiper-slide bg-gradient-to-r from-indigo-500 to-yellow-500 text-white flex flex-col items-center justify-center text-center">
+          <h2 class="text-4xl font-bold mb-4">Limited Time Offer</h2>
+          <p class="text-lg">Up to 50% off today!</p>
+        </div>
+        <div class="swiper-slide bg-gradient-to-r from-green-500 to-blue-500 text-white flex flex-col items-center justify-center text-center">
+          <h2 class="text-4xl font-bold mb-4">Best Seller!</h2>
+          <p class="text-lg">Shop our best-selling products</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold text-center mb-8">Browse by Category</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <img src="https://via.placeholder.com/200" alt="Electronics" class="w-full h-40 object-cover rounded" />
+        <h4 class="mt-4">Electronics</h4>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <img src="https://via.placeholder.com/200" alt="Fashion" class="w-full h-40 object-cover rounded" />
+        <h4 class="mt-4">Fashion</h4>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <img src="https://via.placeholder.com/200" alt="Home" class="w-full h-40 object-cover rounded" />
+        <h4 class="mt-4">Home</h4>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition text-center">
+        <img src="https://via.placeholder.com/200" alt="Toys" class="w-full h-40 object-cover rounded" />
+        <h4 class="mt-4">Toys</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended Products -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold mb-8 text-center">Recommended for You</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition transform hover:-translate-y-1">
+        <div class="relative">
+          <img src="https://via.placeholder.com/200" alt="Product" class="w-full h-48 object-cover rounded" />
+          <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded">New</span>
+        </div>
+        <h4 class="mt-4 font-semibold">Product Name</h4>
+        <div class="flex items-center text-yellow-400 text-sm mt-1">
+          ★★★★☆ <span class="text-gray-500 ml-2 text-xs">(123)</span>
+        </div>
+        <p class="text-sm text-gray-600 mt-1">$29.99</p>
+        <button class="mt-2 w-full bg-primary text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-6 text-center text-sm text-gray-500">
+    <p>&copy; 2025 BOYCOTT Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
